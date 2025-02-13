@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<!doctype html>
+
+<head>
+  <title>CS4241 Exercise</title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="main.css">
+</head>
+
+<canvas id="wel" width="300" height="70">
+  Your browser does not support canvas.
+</canvas>
+
+<body>
+
+<p>This is an example of Canvas elements in HTML</p>
+
+<br>
+<hr>
+<br>
+
+<label>Rectangle Example</label>
+<p>This is a rectangle constructed using the Canvas HTML element</p>
+<canvas id="rect" width="500" height="500"></canvas>
+
+</body>
+
+<script>
+  // welcome text
+  const c = document.getElementById("wel");
+  const ctx = c.getContext("2d");
+
+  // Shadow
+  ctx.shadowColor = "darkred";
+  ctx.shadowBlur = 5;
+  ctx.shadowOffsetX = 3;
+
+  // Create linear gradient
+  const grad = ctx.createLinearGradient(0, 0, 280, 0);
+  grad.addColorStop(0, "red");
+  grad.addColorStop(1, "orange");
+
+  // Fill text with gradient
+  ctx.textBaseline = "bottom";
+  ctx.font = "50px Poppins, sans-serif";
+  ctx.fillStyle = grad;
+  ctx.fillText("WELCOME", 10, 80);
+
+  // rectangle
+  const c2 = document.getElementById("rect");
+  const ctx2 = c2.getContext("2d");
+
+  // Shadow
+  ctx2.shadowColor = "black";
+  ctx2.shadowBlur = 8;
+  ctx2.shadowOffsetX = 10;
+  ctx2.shadowOffsetY = 10;
+
+  // Stroked rectangle
+  ctx2.lineWidth = 4;
+  ctx2.strokeStyle = "darkred";
+  ctx2.strokeRect(170, 20, 200, 100);
+
+</script>
+
+</html>

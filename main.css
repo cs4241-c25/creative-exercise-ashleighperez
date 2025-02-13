@@ -1,0 +1,25 @@
+body {
+    font-family: 'Georgia';
+    color: white;
+    background-color: #282828;
+    margin: 10px 20px 20px 30px;
+}
+
+p {color: #d8c97d;}
+
+hr{color: #d8c97d;}
+
+label {
+    color: orangered;
+    font-weight: bolder;
+    font-size: larger;
+    display:block;
+    width: fit-content;
+    height:fit-content;
+}
+
+canvas{
+    margin-left: -10px;
+    border:transparent; /* Transparent by default*/
+}
+
